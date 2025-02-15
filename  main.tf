@@ -14,3 +14,7 @@ module "first_ec2" {
   connection_ip       = var.connection_ip
 }
 
+
+module "first_s3" {
+  source = "./modules/s3"
+}
