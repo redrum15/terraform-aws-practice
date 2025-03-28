@@ -5,3 +5,8 @@ variable "key_name" {
 variable "connection_ip" {
   type = string
 }
+
+
+variable "db_password" {
+  type = string
+}
