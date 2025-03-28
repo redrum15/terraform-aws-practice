@@ -18,3 +18,16 @@ module "first_ec2" {
 module "first_s3" {
   source = "./modules/s3"
 }
+
+
+module "first_rds" {
+  source   = "./modules/rds"
+  password = var.db_password
+  vpc_id   = module.first_vpc.vpc.id
+  my_ip    = var.connection_ip
+}
+
+
+module "first_dynamobd" {
+  source = "./modules/dynamodb"
+}
